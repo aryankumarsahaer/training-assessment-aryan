@@ -99,7 +99,7 @@ python task_ascii.py --name Aryan
 ### Task 4: Hyperparameter Optimization & Model Training
 Run the hyperparameter tuning and model training script using the GPU:
 ```bash
-C:\Users\aryan\.conda\envs\homework\python.exe task_model.py --trials 3 --epochs 3
+python task_model.py --trials 5 --epochs 30
 ```
 
 ---
@@ -111,10 +111,10 @@ To push the clean workspace to your public repository:
    ```bash
    git init
    ```
-2. Stage and commit code files:
+2. Stage and commit all project files (including training runs):
    ```bash
-   git add task_pattern.py task_logger.py task_ascii.py task_model.py README.md requirements.txt .gitignore
-   git commit -m "Initial commit: Completed training tasks with Optuna integration"
+   git add .
+   git commit -m "Initial commit: Completed training tasks with Optuna integration and runs history"
    ```
 3. Push to your GitHub repository:
    ```bash

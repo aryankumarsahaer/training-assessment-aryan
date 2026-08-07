@@ -4,12 +4,12 @@ __pycache__/
 
 # Local Deep Learning Models & Weights
 *.pt
+!runs/**/*.pt
 yolov8n.pt
 yolov8n-cls.pt
 yolo26n.pt
 
 # Training outputs and temp datasets
-runs/
 classifier_dataset/
 
 # IDE files
