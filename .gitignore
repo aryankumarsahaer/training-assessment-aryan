@@ -1,0 +1,17 @@
+# Python Cache
+__pycache__/
+*.pyc
+
+# Local Deep Learning Models & Weights
+*.pt
+yolov8n.pt
+yolov8n-cls.pt
+yolo26n.pt
+
+# Training outputs and temp datasets
+runs/
+classifier_dataset/
+
+# IDE files
+.vscode/
+.idea/

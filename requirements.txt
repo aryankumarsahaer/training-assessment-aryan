@@ -1,0 +1,16 @@
+# PyTorch with CUDA support (Required for GPU training)
+torch>=2.0.0
+torchvision
+
+# YOLOv8 Deep Learning Framework
+ultralytics>=8.0.0
+
+# Image Processing
+opencv-python
+
+# System Metrics (Used in telemetry logger)
+psutil
+
+# Hyperparameter Optimization
+optuna
+
