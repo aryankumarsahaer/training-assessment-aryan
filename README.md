@@ -61,10 +61,15 @@ YOLOv8 stores training runs in the `runs/classify/` folder. Every individual tra
 * `train-12` (Trial 4): Evaluated hyperparameter set 5.
 * **`train-13` (Final Run)**: The training run executed after Optuna completed, using the best discovered hyperparameters.
 
-### D. Model Weights for Inferencing
-Inside your final training run directory (`runs/classify/train-13/weights/`), two model checkpoints are generated:
-* **`best.pt`**: The model weights that achieved the highest Top-1 validation accuracy during the final training. **This is the model file to use for production inference.**
-* **`last.pt`**: The model weights at the final epoch of training.
+### D. Training Outputs & Model Weights
+Inside your final training run directory (`runs/classify/train-13/`), the pipeline generates the following output files for analysis and inferencing:
+* **`weights/best.pt`**: The model weights that achieved the highest Top-1 validation accuracy during the final training. **Use this file for custom inference.**
+* **`weights/last.pt`**: The model weights at the final epoch of training (epoch 30).
+* **`results.csv` & `results.png`**: The metrics log containing loss and classification accuracy (Top-1 / Top-5) plotted over all 30 training epochs.
+* **`confusion_matrix.png` & `confusion_matrix_normalized.png`**: Heatmaps showing correct classifications and any confusion across your custom classes.
+* **`train_batch*.jpg`**: Visualization of the training image batch and augmentations used during the training process.
+* **`val_batch0_labels.jpg` & `val_batch0_pred.jpg`**: Side-by-side visualization comparing the ground-truth classes against the model's actual predictions on the validation set.
+* **`args.yaml`**: The exact configuration and hyperparameter settings used for this training run.
 
 ---
 
