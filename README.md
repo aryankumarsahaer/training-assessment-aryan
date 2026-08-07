@@ -53,14 +53,16 @@ The pipeline integrates the **Optuna** framework to search for the best hyperpar
 
 ### C. Output Directory Structure (`runs/classify/`)
 YOLOv8 stores training runs in the `runs/classify/` folder. Every individual training invocation automatically increments the folder name to prevent overwriting past results:
-* `train`, `train-2`, `train-3`: Initial check runs.
-* `train-4` (Trial 0): Evaluated hyperparameter set 1.
-* `train-5` (Trial 1): Evaluated hyperparameter set 2.
-* `train-6` (Trial 2): Evaluated hyperparameter set 3.
-* **`train-7` (Final Run)**: The training run executed after Optuna completed, using the best discovered hyperparameters.
+* `train` through `train-7`: Initial check runs.
+* `train-8` (Trial 0): Evaluated hyperparameter set 1.
+* `train-9` (Trial 1): Evaluated hyperparameter set 2.
+* `train-10` (Trial 2): Evaluated hyperparameter set 3.
+* `train-11` (Trial 3): Evaluated hyperparameter set 4.
+* `train-12` (Trial 4): Evaluated hyperparameter set 5.
+* **`train-13` (Final Run)**: The training run executed after Optuna completed, using the best discovered hyperparameters.
 
 ### D. Model Weights for Inferencing
-Inside your final training run directory (`runs/classify/train-7/weights/`), two model checkpoints are generated:
+Inside your final training run directory (`runs/classify/train-13/weights/`), two model checkpoints are generated:
 * **`best.pt`**: The model weights that achieved the highest Top-1 validation accuracy during the final training. **This is the model file to use for production inference.**
 * **`last.pt`**: The model weights at the final epoch of training.
 
@@ -73,7 +75,7 @@ The deep learning and telemetry scripts are designed to run in a Conda environme
 ### Activate Conda Environment
 To execute the scripts using the dedicated interpreter:
 ```bash
-C:\Users\aryan\.conda\envs\homework\python.exe <script_name>.py [args]
+C:\Users\aryan\.conda\envs\training_env\python.exe <script_name>.py [args]
 ```
 
 ---
