@@ -1,0 +1,6 @@
+path: D:/Eternal Robotics/Training/HW_/dataset
+train: images/train
+val: images/val
+names:
+  0: barcode
+  1: hinge

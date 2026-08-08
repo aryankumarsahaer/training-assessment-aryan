@@ -1,85 +1,42 @@
-#!/usr/bin/env python3
-"""
-Task 3: ASCII Reduction
-Convert a name to ASCII values, sum them, and recursively reduce to a single digit.
-"""
+# task_ascii.py
 
-import sys
-import argparse
+def reduce_to_single_digit(number):
+    # Base case
+    if number < 10:
+        return number
 
-def reduce_name_to_digit(name: str, verbose: bool = True) -> tuple[int, list[str]]:
-    """
-    Converts a name to ASCII values, sums them, and recursively reduces the sum to a single digit.
-    Returns a tuple of (result_digit, list_of_log_lines).
-    """
-    logs = []
-    
-    if not name:
-        return 0, ["Error: Name cannot be empty."]
+    # Convert number into individual digits
+    digits = [int(digit) for digit in str(number)]
 
-    # Step 1: Character to ASCII conversion
-    char_ascii = []
-    ascii_values = []
-    for char in name:
-        val = ord(char)
-        char_ascii.append(f"'{char}' -> {val}")
-        ascii_values.append(val)
-    
-    total_sum = sum(ascii_values)
-    
-    logs.append(f"Input Name: \"{name}\"")
-    logs.append("Character ASCII mappings:")
-    for mapping in char_ascii:
-        logs.append(f"  {mapping}")
-    
-    logs.append(f"Initial Sum: {' + '.join(str(v) for v in ascii_values)} = {total_sum}")
-    
-    # Step 2: Recursive digit reduction
-    current_val = total_sum
-    step_num = 1
-    
-    while current_val >= 10:
-        digits = [int(d) for d in str(current_val)]
-        next_val = sum(digits)
-        logs.append(f"Reduction Step {step_num}: Summing digits of {current_val} -> {' + '.join(str(d) for d in digits)} = {next_val}")
-        current_val = next_val
-        step_num += 1
-        
-    logs.append(f"Final Single Digit: {current_val}")
-    
-    if verbose:
-        for line in logs:
-            print(line)
-            
-    return current_val, logs
+    # Calculate sum
+    digit_sum = sum(digits)
 
-def main():
-    parser = argparse.ArgumentParser(
-        description="Convert a name to ASCII values, sum them, and recursively reduce to a single digit."
-    )
-    parser.add_argument(
-        "-n", "--name",
-        type=str,
-        help="The name string to convert and reduce"
-    )
-    args = parser.parse_args()
+    # Show calculation
+    calculation = " + ".join(str(digit) for digit in digits)
+    print(f"{calculation} = {digit_sum}")
 
-    # If no name is provided, prompt interactively
-    if args.name is None:
-        try:
-            name = input("Enter a name: ").strip()
-            if not name:
-                print("Error: Name cannot be empty.")
-                sys.exit(1)
-        except (KeyboardInterrupt, EOFError):
-            print("\nOperation cancelled.")
-            sys.exit(0)
-    else:
-        name = args.name
+    # Recursion
+    return reduce_to_single_digit(digit_sum)
 
-    print("\n=== ASCII Reduction ===")
-    reduce_name_to_digit(name, verbose=True)
-    print("=======================\n")
+# Take name from user
+name = input("Enter your name: ").upper()
 
-if __name__ == "__main__":
-    main()
+total = 0
+
+print("\nASCII Values:")
+
+# Convert characters to ASCII
+for char in name:
+    ascii_value = ord(char)
+    print(f"{char} -> {ascii_value}")
+    total += ascii_value
+
+
+print(f"\nASCII Sum = {total}")
+
+print("\nDigit Sum Process:")
+
+# Reduce to single digit
+result = reduce_to_single_digit(total)
+
+print(f"\nFinal Single Digit = {result}")

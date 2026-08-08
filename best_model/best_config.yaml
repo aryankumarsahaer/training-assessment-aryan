@@ -1,0 +1,28 @@
+winning_experiment_id: exp_002
+model:
+  architecture: yolov8n.pt
+  pretrained_weights: yolov8n.pt
+dataset:
+  data_yaml: data.yaml
+  seed: 42
+  split_ratio: 80/20
+training:
+  epochs_requested: 200
+  epochs_completed: 122
+  best_epoch: 92
+  imgsz: 800
+  batch: 8
+  optimizer: auto
+  lr0: 0.01
+  weight_decay: 0.0005
+  early_stopped: True
+results:
+  precision: 0.970805
+  recall: 0.996896
+  map50: 0.995000
+  map50_95: 0.779040
+per_class:
+  barcode:
+    mAP50_95: 0.747381
+  hinge:
+    mAP50_95: 0.810700

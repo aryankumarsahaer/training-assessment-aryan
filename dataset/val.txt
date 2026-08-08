@@ -1,0 +1,18 @@
+./dataset/images/val/img_005.jpg
+./dataset/images/val/img_006.jpg
+./dataset/images/val/img_013.jpg
+./dataset/images/val/img_015.jpg
+./dataset/images/val/img_016.jpg
+./dataset/images/val/img_019.jpg
+./dataset/images/val/img_029.jpg
+./dataset/images/val/img_030.jpg
+./dataset/images/val/img_031.jpg
+./dataset/images/val/img_033.jpg
+./dataset/images/val/img_037.jpg
+./dataset/images/val/img_056 (2).jpg
+./dataset/images/val/img_056.jpg
+./dataset/images/val/img_066.jpg
+./dataset/images/val/img_071.jpg
+./dataset/images/val/img_074.jpg
+./dataset/images/val/img_075.jpg
+./dataset/images/val/img_081.jpg

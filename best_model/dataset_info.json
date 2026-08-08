@@ -1,0 +1,90 @@
+{
+    "report_generated_at": "2026-08-08T02:27:05.781148",
+    "split_seed": 42,
+    "split_ratio_train_val": "80/20",
+    "counts": {
+        "source_images": 93,
+        "source_labels": 91,
+        "train_images": 64,
+        "val_images": 17,
+        "total_barcode_instances": 89,
+        "total_hinge_instances": 56
+    },
+    "annotations_format": {
+        "polygons": 145,
+        "bounding_boxes": 0
+    },
+    "validation_issues": {
+        "missing_labels": [
+            "img_033",
+            "img_035"
+        ],
+        "missing_images": [],
+        "corrupt_images": [],
+        "empty_labels": [],
+        "malformed_annotations": [],
+        "invalid_coords": [],
+        "invalid_classes": [],
+        "invalid_boxes": []
+    },
+    "duplicate_groups": {
+        "img_049": [
+            "img_049 (2).jpg",
+            "img_049.jpg"
+        ],
+        "img_050": [
+            "img_050 (2).jpg",
+            "img_050.jpg"
+        ],
+        "img_051": [
+            "img_051 (2).jpg",
+            "img_051.jpg"
+        ],
+        "img_052": [
+            "img_052 (2).jpg",
+            "img_052.jpg"
+        ],
+        "img_053": [
+            "img_053 (2).jpg",
+            "img_053.jpg"
+        ],
+        "img_054": [
+            "img_054 (2).jpg",
+            "img_054.jpg"
+        ],
+        "img_055": [
+            "img_055 (2).jpg",
+            "img_055.jpg"
+        ],
+        "img_056": [
+            "img_056 (2).jpg",
+            "img_056.jpg"
+        ],
+        "img_057": [
+            "img_057 (2).jpg",
+            "img_057.jpg"
+        ],
+        "img_058": [
+            "img_058 (2).jpg",
+            "img_058.jpg"
+        ],
+        "img_059": [
+            "img_059 (2).jpg",
+            "img_059.jpg"
+        ],
+        "img_060": [
+            "img_060 (2).jpg",
+            "img_060.jpg"
+        ]
+    },
+    "leakage_analysis": {
+        "sequential_leakage_risks": [
+            {
+                "frame1": "img_078",
+                "frame2": "img_079",
+                "mse": 114.37,
+                "description": "High sequential similarity detected between img_078 and img_079 (MSE: 114.37)"
+            }
+        ]
+    }
+}

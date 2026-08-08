@@ -1,0 +1,75 @@
+./dataset/images/train/img_002.jpg
+./dataset/images/train/img_003.jpg
+./dataset/images/train/img_004.jpg
+./dataset/images/train/img_007.jpg
+./dataset/images/train/img_008.jpg
+./dataset/images/train/img_009.jpg
+./dataset/images/train/img_010.jpg
+./dataset/images/train/img_011.jpg
+./dataset/images/train/img_012.jpg
+./dataset/images/train/img_014.jpg
+./dataset/images/train/img_017.jpg
+./dataset/images/train/img_018.jpg
+./dataset/images/train/img_020.jpg
+./dataset/images/train/img_021.jpg
+./dataset/images/train/img_022.jpg
+./dataset/images/train/img_023.jpg
+./dataset/images/train/img_024.jpg
+./dataset/images/train/img_025.jpg
+./dataset/images/train/img_026.jpg
+./dataset/images/train/img_027.jpg
+./dataset/images/train/img_028.jpg
+./dataset/images/train/img_032.jpg
+./dataset/images/train/img_034.jpg
+./dataset/images/train/img_035.jpg
+./dataset/images/train/img_036.jpg
+./dataset/images/train/img_038.jpg
+./dataset/images/train/img_039.jpg
+./dataset/images/train/img_040.jpg
+./dataset/images/train/img_041.jpg
+./dataset/images/train/img_042.jpg
+./dataset/images/train/img_043.jpg
+./dataset/images/train/img_044.jpg
+./dataset/images/train/img_045.jpg
+./dataset/images/train/img_046.jpg
+./dataset/images/train/img_047.jpg
+./dataset/images/train/img_048.jpg
+./dataset/images/train/img_049 (2).jpg
+./dataset/images/train/img_049.jpg
+./dataset/images/train/img_050 (2).jpg
+./dataset/images/train/img_050.jpg
+./dataset/images/train/img_051 (2).jpg
+./dataset/images/train/img_051.jpg
+./dataset/images/train/img_052 (2).jpg
+./dataset/images/train/img_052.jpg
+./dataset/images/train/img_053 (2).jpg
+./dataset/images/train/img_053.jpg
+./dataset/images/train/img_054 (2).jpg
+./dataset/images/train/img_054.jpg
+./dataset/images/train/img_055 (2).jpg
+./dataset/images/train/img_055.jpg
+./dataset/images/train/img_057 (2).jpg
+./dataset/images/train/img_057.jpg
+./dataset/images/train/img_058 (2).jpg
+./dataset/images/train/img_058.jpg
+./dataset/images/train/img_059 (2).jpg
+./dataset/images/train/img_059.jpg
+./dataset/images/train/img_060 (2).jpg
+./dataset/images/train/img_060.jpg
+./dataset/images/train/img_061.jpg
+./dataset/images/train/img_062.jpg
+./dataset/images/train/img_063.jpg
+./dataset/images/train/img_064.jpg
+./dataset/images/train/img_065.jpg
+./dataset/images/train/img_067.jpg
+./dataset/images/train/img_068.jpg
+./dataset/images/train/img_069.jpg
+./dataset/images/train/img_070.jpg
+./dataset/images/train/img_072.jpg
+./dataset/images/train/img_073.jpg
+./dataset/images/train/img_076.jpg
+./dataset/images/train/img_077.jpg
+./dataset/images/train/img_078.jpg
+./dataset/images/train/img_079.jpg
+./dataset/images/train/img_080.jpg
+./dataset/images/train/img_082.jpg

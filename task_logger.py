@@ -1,43 +1,65 @@
-import time
+# task_logger.py
+
 import json
+import os
+import time
 from datetime import datetime
 
-try:
-    import psutil
-except ImportError:
-    print("Please install psutil first:")
-    print("pip install psutil")
-    exit()
 
-filename = "telemetry_log.json"
-interval = 600  # 10 minutes (change to 2 or 5 for quick testing)
+FILE_NAME = "telemetry.json"
 
-print(f"Logging to {filename} every {interval} seconds. Press Ctrl+C to stop.")
+# Ask user for interval in seconds
+interval = int(input("Enter logging interval in seconds: "))
+
+
+# Load existing data if file exists
+if os.path.exists(FILE_NAME):
+    try:
+        with open(FILE_NAME, "r") as file:
+            data = json.load(file)
+
+        if data:
+            counter = data[-1]["counter"]
+        else:
+            counter = 0
+
+    except json.JSONDecodeError:
+        data = []
+        counter = 0
+
+else:
+    data = []
+    counter = 0
+
+
+print(f"\nLogger started - logging every {interval} seconds")
+print("Press Ctrl+C to stop.\n")
+
 
 try:
     while True:
-        entry = {
-            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "cpu_usage": psutil.cpu_percent(interval=1),
-            "memory_usage": psutil.virtual_memory().percent
-        }
 
-        # Read existing data or start fresh
-        try:
-            with open(filename, "r") as file:
-                data = json.load(file)
-                if not isinstance(data, list):
-                    data = [data]
-        except (FileNotFoundError, json.JSONDecodeError):
-            data = []
+        counter += 10
+
+        now = datetime.now()
+
+        entry = {
+            "time": now.strftime("%H:%M:%S"),
+            "date": now.strftime("%Y-%m-%d"),
+            "counter": counter
+        }
 
         data.append(entry)
 
-        # Write updated data back
-        with open(filename, "w") as file:
+        # Update telemetry.json
+        with open(FILE_NAME, "w") as file:
             json.dump(data, file, indent=4)
 
-        print(f"[{entry['timestamp']}] CPU: {entry['cpu_usage']}% | RAM: {entry['memory_usage']}% - Logged successfully.")
+        print("Logged:", entry)
+
+        # Wait for given seconds
         time.sleep(interval)
+
+
 except KeyboardInterrupt:
-    print("\nLogging stopped by user.")
+    print("\nLogger stopped.")
