@@ -1,4 +1,4 @@
-# task_pattern.py
+# task_pattern.py task 1
 
 n = int(input("Enter n: "))
 
