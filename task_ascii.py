@@ -1,4 +1,4 @@
-# task_ascii.py
+# task_ascii.py #task 3
 
 def reduce_to_single_digit(number):
     # Base case
