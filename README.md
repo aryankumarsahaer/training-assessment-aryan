@@ -160,7 +160,7 @@ Final Single Digit = 1
 
 ### Video Demonstration
 
-[Task 4 Video - To Be Uploaded](#)
+[watch Task 4 Video ](https://drive.google.com/file/d/1fJaHAPabhHl_ogqXurASJbTlEocye9Xm/view?usp=sharing)
 
 All logic for Task 4 is encapsulated within **[task_model.py](file:///D:/Eternal%20Robotics/Training/HW_/task_model.py)** without secondary helper scripts.
 
